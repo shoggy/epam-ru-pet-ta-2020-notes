@@ -1,4 +1,5 @@
 ## Test structure requirements:
+- [ ] `.gitignore` includes `target, .iml, .idea, ...`
 - [ ] Maven project
 - [ ] POM xml has following sections:
   - [ ] artifact attributes
@@ -10,13 +11,15 @@
 - [ ] TestNG is used as a testing framework
 - [ ] For test maven build maven-surefire-plugin is used
 - [ ] Code conforms to the Java Code Convention
+- [ ] `maven-checkstyle-plugin` is configured to use specific rules and is run during  `validate` phase
 
 ## File placement requirements:
-- [ ] Classes should be placed into `src/test/java/hw1` package and sub-packages
+- [ ] Classes should be placed into `src/test/java/com/epam/tc/hw1` package and sub-packages
 - [ ] Homework should be developed in new Java classes
 - [ ] Test methods' names should reflect checking functionality
 
 ## Tests requirements:
+- [ ] Checkstyle plugin should not produce errors
 - [ ] You should test several Calculator operations (at least 4)
 - [ ] Test for each operation should be placed in separate classes
 - [ ] Create a test suite, which could run all tests
@@ -27,6 +30,8 @@
 - [ ] Profiles
   - [ ] Create 3 maven profiles which allow choosing test suite
   - [ ] by default should work profile which runs add and subtract operations tests
+- [ ] Test must be run using maven
+- [ ] AssertJ is used instead of basic TestNg asserts
 
 ## Bonus
 - [ ] Student name in artifactId
